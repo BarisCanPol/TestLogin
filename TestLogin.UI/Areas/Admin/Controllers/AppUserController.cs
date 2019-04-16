@@ -18,7 +18,16 @@ namespace TestLogin.UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Add(AppUser data)
         {
-            service.AppUserService.Add(data);
+            AppUser user = service.AppUserService.FindByUserName(data.UserName);
+            if (user is null)
+            {
+                service.AppUserService.Add(data);
+            }
+            else
+            {
+                return View();
+            }
+            
             return Redirect("/Admin/Home/Index");
         }
     }
