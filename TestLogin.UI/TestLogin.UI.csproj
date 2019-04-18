@@ -99,6 +99,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\ionicons.min.css" />
+    <Content Include="Content\css\Test.css" />
     <Content Include="Content\css\_all-skins.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -114,17 +115,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginVM\Class1.cs" />
     <Compile Include="Areas\Admin\Models\LoginVM\LoginVm.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Md5Format.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

@@ -14,6 +14,7 @@ namespace TestLogin.DAL.ORM.Map
             Property(x => x.UserName).IsRequired();
             Property(a => a.Password).IsRequired();
             Property(a => a.Role).IsRequired();
+            Property(x => x.ConfirmPassword).IsRequired();
 
         }
     }

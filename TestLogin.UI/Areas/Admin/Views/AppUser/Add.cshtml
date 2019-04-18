@@ -6,8 +6,10 @@
 }
 
 
+@model TestLogin.UI.Areas.Admin.Models.LoginVM.Class1
 
 
+<link href="~/Content/css/Test.css" rel="stylesheet" />
 <section class="content">
     <div class="row">
         <div class="col-md-6">
@@ -22,11 +24,27 @@
                         <div class="form-group">
                             <label for="UserName">User Name</label>
                             <input type="text" name="UserName" class="form-control" placeholder="User Name">
+                            <i> @Html.ValidationMessageFor(x => x.UserName)</i>   @*for error message*@
                         </div>
 
                         <div class="form-group">
                             <label for="Password">Password</label>
                             <input type="password" name="Password" class="form-control" placeholder="Password">
+                            <div class="Test1">
+                                <i>@Html.ValidationMessageFor(x => x.Password)</i>   @*for error message*@
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ConfirmPassword">ConfirmPassword</label>
+                            <input type="password" name="ConfirmPassword" class="form-control" placeholder="ConfirmPassword">
+                            <div class="Test1">
+                                <i>@Html.ValidationMessageFor(x => x.ConfirmPassword)</i>  @*for error message*@
+                            </div>
+
+
                         </div>
 
                         <div class="form-group">
@@ -43,6 +61,11 @@
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
+                    <div class="Test1">            @*Test1 in scripts*@ 
+                        <strong>@ViewData["error"] </strong>   @*for error message*@
+                    </div>
+                    
+                   
                 </form>
             </div>
         </div>
